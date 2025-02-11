@@ -1,0 +1,51 @@
+body {
+  padding: 0 15% 0 15%;
+  margin: 0;
+}
+
+.web-header {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+
+  background-color: darkgrey;
+}
+
+.logo {
+  margin: 12px 0 12px 2.5%;
+  padding: 0;
+}
+
+.nav-bar {
+  width: 30%;
+  min-width: 175px;
+}
+
+.nav-bar ul {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+
+  text-align: center;
+}
+
+.nav-bar li {
+  display: flex;
+
+  width: 40%;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-bar li:hover {
+  cursor: pointer;
+  background-color: white;
+}
