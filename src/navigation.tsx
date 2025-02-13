@@ -35,7 +35,7 @@ export default function Navigation() {
                 <Routes>
                     <Route path="/test" element={<Test/>} />
                     <Route path="/login" element={<Login />} />
-                    <Route path="/" element={<About tNumber={3} vNumber={2} relDate={"2/6/2025"} prodName={"Driver Incentive Program"} prodDesc={"Hello, World!"}/>} />
+                    <Route path="/" element={<About/>} />
                 </Routes>
             </div>
         </Router>
