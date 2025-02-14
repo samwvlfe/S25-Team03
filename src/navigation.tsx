@@ -7,7 +7,7 @@ import {
   Link
 } from "react-router-dom";
 import About from './pages/About.tsx';
-import Login from './pages/Login.tsx'
+import Signup from './pages/Signup.tsx'
 import Support from './pages/Support.tsx';
 import logo from './logo.svg';
 
@@ -30,7 +30,7 @@ export default function Navigation() {
                                 <Link to="/support">Support</Link>
                             </li>
                             <li>
-                                <Link to="/login">Login</Link>
+                                <Link to="/signup">Sign Up</Link>
                             </li>
                         </ul>
                     </nav>
@@ -38,7 +38,7 @@ export default function Navigation() {
 
                 <Routes>
                     <Route path="/support" element={<Support/>} />
-                    <Route path="/login" element={<Login />} />
+                    <Route path="/signup" element={<Signup />} />
                     <Route path="/" element={<About/>} />
                 </Routes>
             </div>
