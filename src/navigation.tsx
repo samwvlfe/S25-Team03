@@ -8,14 +8,18 @@ import {
 } from "react-router-dom";
 import About from './pages/About.tsx';
 import Login from './pages/Login.tsx'
-import Test from './pages/Test.tsx';
+import Support from './pages/Support.tsx';
+import logo from './logo.svg';
 
 export default function Navigation() {
     return (
         <Router>
             <div>
                 <div className="web-header">
-                    <h2 className="logo">Logo</h2>
+                    <div className="logo">
+                        <img src={logo}/>
+                        <p><b>AlienBaba</b>.com</p>
+                    </div>
                     
                     <nav className="nav-bar">
                         <ul>
@@ -23,7 +27,7 @@ export default function Navigation() {
                                 <Link to="/">About</Link>
                             </li>
                             <li>
-                                <Link to="/test">Test</Link>
+                                <Link to="/support">Support</Link>
                             </li>
                             <li>
                                 <Link to="/login">Login</Link>
@@ -33,7 +37,7 @@ export default function Navigation() {
                 </div>
 
                 <Routes>
-                    <Route path="/test" element={<Test/>} />
+                    <Route path="/support" element={<Support/>} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/" element={<About/>} />
                 </Routes>
