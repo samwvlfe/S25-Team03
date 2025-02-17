@@ -12,6 +12,7 @@ DROP TABLE IF EXISTS Driver;
 DROP TABLE IF EXISTS Admin;
 DROP TABLE IF EXISTS SponsorUser;
 DROP TABLE IF EXISTS Sponsor;
+DROP TABLE IF EXISTS Applications;
 
 -- Re-enable foreign key checks
 SET FOREIGN_KEY_CHECKS = 1;

@@ -83,3 +83,26 @@ CREATE TABLE IF NOT EXISTS AuditLog (
     Action TEXT NOT NULL,
     Details TEXT NULL
 );
+
+-- Applications Table (For Driver & Sponsor Applications)
+CREATE TABLE IF NOT EXISTS Applications (
+    ApplicationID INT AUTO_INCREMENT PRIMARY KEY,
+    ApplicantName VARCHAR(255) NOT NULL,
+    ApplicantType ENUM('Driver', 'Sponsor') NOT NULL,
+    Username VARCHAR(100) UNIQUE NOT NULL,
+    Email VARCHAR(255) NOT NULL,
+    PasswordHash VARCHAR(255) NOT NULL,
+    CompanyID INT NULL,  -- Only applicable for sponsor applications
+    ApplicationStatus ENUM('Pending', 'Approved', 'Rejected') DEFAULT 'Pending',
+    SubmissionDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    
+    -- Review Columns
+    ReviewedByAdminID INT NULL,  -- Used when a sponsor application is approved by an admin
+    ReviewedBySponsorID INT NULL,  -- Used when a driver application is approved by a sponsor
+    ReviewDate TIMESTAMP NULL,
+
+    -- Foreign Keys
+    FOREIGN KEY (CompanyID) REFERENCES Sponsor(CompanyID) ON DELETE SET NULL,
+    FOREIGN KEY (ReviewedByAdminID) REFERENCES Admin(AdminID) ON DELETE SET NULL,
+    FOREIGN KEY (ReviewedBySponsorID) REFERENCES SponsorUser(SponsorUserID) ON DELETE SET NULL
+);
