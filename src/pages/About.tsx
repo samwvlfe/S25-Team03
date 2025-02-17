@@ -20,14 +20,14 @@ export default function About() {
     // Returning all necessary data from the database.
     // Additional logic is in case the data isn't fully loaded.
     return (
-        <div>
-            <h1>About Page Test</h1>
+        <div className="container">
+            <h1>About Us</h1>
             <ul>
-                <li>Team {data ? data.team_number : "Loading..."}</li>
-                <li>Version {data ? data.version_number : "Loading..."}</li>
-                <li>{data ? data.release_date : "Loading..."}</li>
-                <li>{data ? data.product_name : "Loading..."}</li>
-                <li>{data ? data.product_description : "Loading..."}</li>
+                <li>Team {data ? data.team_number : "..."}</li>
+                <li>Version {data ? data.version_number : "..."}</li>
+                <li>{data ? data.release_date : "..."}</li>
+                <li>{data ? data.product_name : "..."}</li>
+                <li>{data ? data.product_description : "..."}</li>
             </ul>
         </div>
     )
