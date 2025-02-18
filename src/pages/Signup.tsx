@@ -1,7 +1,7 @@
 export default function Signup() {
     return (
         <div>
-            <form>
+            <form class="signup-form">
                 <input type="text" />
                 <input type="text" />
                 <input type="submit" />
