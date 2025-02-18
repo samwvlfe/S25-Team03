@@ -106,3 +106,14 @@ CREATE TABLE IF NOT EXISTS Applications (
     FOREIGN KEY (ReviewedByAdminID) REFERENCES Admin(AdminID) ON DELETE SET NULL,
     FOREIGN KEY (ReviewedBySponsorID) REFERENCES SponsorUser(SponsorUserID) ON DELETE SET NULL
 );
+
+-- Orders Table (For Drivers and Sponsors)
+CREATE TABLE IF NOT EXISTS Orders (
+    OrderID INT AUTO_INCREMENT PRIMARY KEY,
+    DriverID INT,
+    SponsorID INT,
+    OrderDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    TotalPointsSpent INT NOT NULL,
+    FOREIGN KEY (DriverID) REFERENCES Driver(DriverID) ON DELETE CASCADE,
+    FOREIGN KEY (SponsorID) REFERENCES Sponsor(CompanyID) ON DELETE CASCADE
+);
