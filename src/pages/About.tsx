@@ -23,12 +23,16 @@ export default function About() {
     // Additional logic is in case the data isn't fully loaded.
     return (
         <div className="about-container">
-            <h1>AlienBaba — Safe Shuttling Starts Here</h1>
-            <div className="ship">
-                <img src={ship} height="100px"/>
-                <img src={flame} height="40px"/>
+            <div className="starfield"/>
+            <div className="about-main">
+                <h1>AlienBaba — Safe Shuttling Starts Here</h1>
+                <div className="ship">
+                    <img src={ship} height="100px"/>
+                    <img src={flame} height="40px"/>
+                </div>
+                <p className="team-info">Team {data ? data.team_number : "..."} &#9900; Version {data ? data.version_number : "..."} &#9900; {data ? data.release_date : "..."}</p>
             </div>
-            <p className="team-info">Team {data ? data.team_number : "..."} &#9900; Version {data ? data.version_number : "..."} &#9900; {data ? data.release_date : "..."}</p>
+            <div className="starfield" />
         </div>
     )
 }

@@ -145,16 +145,30 @@ body {
 .about-container {
   display: flex;
 
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-around;
 
   background-color: #231F20;
   color: white;
+}
+
+.starfield {
+  width: 33%;
+
+  height: 100%;
+}
+
+.about-main {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+
+  padding: 10px;
 
   overflow: hidden;
 }
 
-.about-container h1, p {
+.about-main h1, p {
   margin: 10px;
 }
 

@@ -11,15 +11,12 @@ There are currently four additional dependencies you need to install:
 Inside of the folder, you should notice a file titled `start.bat`. Double-click the file.
 This will launch both the frontend and the backend.
 
-
-
 # Starting Up (Mac/Linux)
 
 Inside of the folder, you should notice a file titled `start_application.sh`.
 Open the terminal, navigate to the working directory `chmod 755 start_application.sh`. You only need to do this once.
 You should then be able to type the command `./start_application.sh` which will then launch the
 frontend and the backend.
-
 
 # Starting Up (without scripts, Windows/Mac/Linux)
 
