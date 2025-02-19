@@ -1,6 +1,22 @@
 /* Importing Reddit Sans from Google Fonts. */
 @import url('https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap');
 
+/* All needed animations. */
+@keyframes star-flicker {
+  0% {box-shadow: 0 0 6px 1px white; opacity: 60%;}
+  100% {box-shadow: 0 0 10px 1px white;}
+}
+
+@keyframes ship-movement {
+  0% {transform: rotate(0deg) translateX(5%) rotate(0deg);}
+  100% {transform: rotate(360deg) translateX(5%) rotate(-360deg);}
+}
+
+@keyframes flame-flicker {
+  0% {transform: scaleY(104%) translateY(6%);}
+  100% {transform: scaleY(96%); opacity: 95%;}
+}
+
 body {
   margin: 0;
 
@@ -134,6 +150,37 @@ body {
 
   background-color: #231F20;
   color: white;
+
+  overflow: hidden;
+}
+
+.about-container h1, p {
+  margin: 10px;
+}
+
+.ship {
+  display: flex;
+  flex-direction: column;
+
+  margin: 75px 0 75px 0;
+
+  animation: 3s linear 0s infinite ship-movement;
+}
+
+.ship img:last-child {
+  margin-top: 5px;
+
+  animation: 0.5s linear 0s infinite alternate flame-flicker;
+}
+
+.star {
+  background-color: white;
+  border-radius: 50px;
+
+  aspect-ratio: 1/1;
+  height: 5px;
+
+  animation: 2s ease 0s infinite alternate star-flicker;
 }
 
 .team-info {

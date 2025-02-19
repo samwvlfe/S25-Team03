@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import ship from '../spaceship.svg';
+import flame from '../flame.svg';
 
 export default function About() {
     // Obtaining all the info from the backend.
@@ -22,14 +24,11 @@ export default function About() {
     return (
         <div className="about-container">
             <h1>AlienBaba — Safe Shuttling Starts Here</h1>
-            <ul>
-                <li>Team {data ? data.team_number : "..."}</li>
-                <li>Version {data ? data.version_number : "..."}</li>
-                <li>{data ? data.release_date : "..."}</li>
-                <li>{data ? data.product_name : "..."}</li>
-                <li>{data ? data.product_description : "..."}</li>
-            </ul>
-            <p className="team-info">Team {data ? data.team_number : "..."} &#9733; Version {data ? data.version_number : "..."} &#9733; {data ? data.release_date : "..."}</p>
+            <div className="ship">
+                <img src={ship} height="100px"/>
+                <img src={flame} height="40px"/>
+            </div>
+            <p className="team-info">Team {data ? data.team_number : "..."} &#9900; Version {data ? data.version_number : "..."} &#9900; {data ? data.release_date : "..."}</p>
         </div>
     )
 }
