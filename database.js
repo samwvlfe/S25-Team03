@@ -4,9 +4,7 @@ const cors = require('cors');
 const axios = require('axios');
 const app = express();
 const port = process.env.PORT || 2999;
-//STOP FORGETTING DEPENDENCIES YOU IDIOT
 
-// KEEP THE ORDER JSON PARSING BEFORE MIDDLEWARE
 app.use(express.json());
 app.use(cors());
 
@@ -27,7 +25,21 @@ db.connect(err => {
     }
 });
 
-//Log the middleware, need more logging
+// Table name for the about page
+const aboutTable = 'AboutPage';
+
+// Get the latest about page data
+app.get('/api/about', (req, res) => {
+    db.query(`SELECT * FROM ${aboutTable} ORDER BY release_date DESC LIMIT 1`, (err, results) => {
+        if (err) {
+            res.status(500).json({ error: 'Database query failed', details: err });
+        } else {
+            res.json(results[0]); // Returns the latest sprint data
+        }
+    });
+});
+
+//Log the middleware
 app.use((req, res, next) => {
     if (req.method === 'POST' || req.method === 'PUT') {
         if (!req.body) {
@@ -51,7 +63,7 @@ app.use((req, res, next) => {
     next();
 });
 
-//The post route, will be abused
+//The post route
 app.post('/api/about', (req, res) => {
     if (!req.body) {
         return res.status(400).json({ error: 'Invalid JSON body' });
