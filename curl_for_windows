@@ -1,0 +1,4 @@
+@echo off
+curl -X POST http://127.0.0.1:2999/api/about ^
+-H "Content-Type: application/json" ^
+-d "{ \"team_number\": 3, \"version_number\": \"v4\", \"release_date\": \"2025-02-20\", \"product_name\": \"Good Driver Incentive\", \"product_description\": \"An application that rewards safe driving behavior.\", \"user_id\": 101, \"user_type\": \"admin\" }"
