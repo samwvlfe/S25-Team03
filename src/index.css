@@ -2,11 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap');
 
 /* All needed animations. */
-@keyframes star-flicker {
-  0% {box-shadow: 0 0 6px 1px white; opacity: 60%;}
-  100% {box-shadow: 0 0 10px 1px white;}
-}
-
 @keyframes ship-movement {
   0% {transform: rotate(0deg) translateX(5%) rotate(0deg);}
   100% {transform: rotate(360deg) translateX(5%) rotate(-360deg);}
@@ -17,9 +12,15 @@
   100% {transform: scaleY(96%); opacity: 95%;}
 }
 
+@keyframes scroll-background {
+  0% {transform: translateY(0%);}
+  100% {transform: translateY(-100%);}
+}
+
 body {
   margin: 0;
 
+  background-color: #f5f5f5;
   color: #231F20;
 
   font-family: "Reddit Sans";
@@ -71,6 +72,7 @@ body {
 
 .nav-bar ul {
   display: flex;
+  gap: 10px;
 
   height: 100%;
 
@@ -83,14 +85,8 @@ body {
 .nav-bar li {
   width: 40%;
 
-  margin-right: 10px;
-
   justify-content: center;
   align-items: center;
-}
-
-.nav-bar li:last-child {
-  margin: 0;
 }
 
 .nav-bar a {
@@ -141,25 +137,18 @@ body {
   text-decoration: none;
 }
 
-/* Formatting for the about page. */
-.about-container {
+/* Formatting for the about page header. */
+.about-header {
   display: flex;
 
-  justify-content: space-around;
+  justify-content: space-between;
 
   background-color: #231F20;
   color: white;
 }
 
-.starfield {
-  width: 33%;
-
-  height: 100%;
-}
-
-.about-main {
+.banner {
   display: flex;
-
   flex-direction: column;
   align-items: center;
 
@@ -170,6 +159,26 @@ body {
 
 .about-main h1, p {
   margin: 10px;
+}
+
+.starfield {
+  display: flex;
+
+  width: 20%;
+
+  overflow: hidden;
+}
+
+.starfield::before {
+  content: '';
+  
+  height: 200%;
+  width: 100%;
+  background-image: url('./starfield.svg');
+
+
+
+  /* animation: 0.5s linear 0s infinite alternate scroll-background; */
 }
 
 .ship {
@@ -187,16 +196,33 @@ body {
   animation: 0.5s linear 0s infinite alternate flame-flicker;
 }
 
-.star {
-  background-color: white;
-  border-radius: 50px;
-
-  aspect-ratio: 1/1;
-  height: 5px;
-
-  animation: 2s ease 0s infinite alternate star-flicker;
-}
-
 .team-info {
   font-size: 10pt;
+}
+
+/* Formatting for the smaller info section. */
+.info-container {
+  text-align: center;
+}
+
+.info-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+
+  padding: 0;
+  margin: 0;
+
+  list-style-type: none;
+}
+
+.info-container li {
+  width: 20%;
+
+  border-radius: 20px;
+  padding: 16px;
+
+  background-color: white;
+  box-shadow: 0 5px 5px lightgrey;
 }
