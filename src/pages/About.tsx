@@ -38,11 +38,14 @@ export default function About() {
             <div className="info-container">
                 <h2>{data ? data.product_name : "..."}</h2>
                 <p>{data ? data.product_description : "..."}</p>
+            </div>
+            <div className="info-container">
+                <h2>Join. Drive. Earn.</h2>
                 <ul>
                     <li>
                         📝 Apply to a Sponsor
                         <hr/>
-                        Joining our site will provide you with a comprehensive list of sponsors all looking for someone like you to join the team! Apply to as many or as little as you want — your future may be a click away!
+                        When you join our site you will see all of our sponsored partners. Apply to as many or as little as you want — your future may be a click away!
                     </li>
                     <li>
                         🚚 Drive Safe
@@ -53,6 +56,26 @@ export default function About() {
                         🪙 Get Rewarded
                         <hr/>
                         After you earn enough points, you can navigate over to your sponsor's catalog. There you will be able to redeem your points for all sorts of exciting rewards!
+                    </li>
+                </ul>
+            </div>
+            <div className="info-container">
+                <h2>Management Made Easy.</h2>
+                <ul>
+                    <li>
+                        📄 Discover Top Talent
+                        <hr/>
+                        Save yourself time with AlienBaba's comprehensive application system to find the ideal candidate for the job!
+                    </li>
+                    <li>
+                        🤝 Sponsors Help Sponsors
+                        <hr/>
+                        Have a work partner that would be AlienBaba material? You can help them easily set up an account and add them to our site!
+                    </li>
+                    <li>
+                        ⚙️ Ultimate Control
+                        <hr/>
+                        We provide our sponsored partners with a suite of adaptive utilities. Tailor your sponsor page and catalog to your exact specificiations.
                     </li>
                 </ul>
             </div>

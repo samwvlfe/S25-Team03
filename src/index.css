@@ -206,6 +206,16 @@ body {
 /* Formatting for the smaller info section. */
 .info-container {
   text-align: center;
+
+  padding: 24px;
+}
+
+.info-container:nth-child(odd) {
+  background-color: rgba(255,255,255,0.25);
+}
+
+.info-container h2 {
+  margin: 24px;
 }
 
 .info-container ul {
@@ -215,17 +225,28 @@ body {
   justify-content: center;
 
   padding: 0;
-  margin: 0;
+  margin: 24px;
 
   list-style-type: none;
 }
 
 .info-container li {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
   width: 20%;
+  aspect-ratio: 2.25/1;
 
   border-radius: 20px;
-  padding: 16px;
+  padding: 24px;
 
   background-color: white;
   box-shadow: 0 5px 5px lightgrey;
+}
+
+.info-container li hr {
+  border: 1px solid lightgrey;
+  width: 60%;
 }
