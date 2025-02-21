@@ -39,10 +39,21 @@ export default function About() {
                 <h2>{data ? data.product_name : "..."}</h2>
                 <p>{data ? data.product_description : "..."}</p>
                 <ul>
-                    <li>Points System</li>
-                    <li>Rewards Catalog</li>
-                    <li>Responsive Applications</li>
-                    <li>Sponsor Controls</li>
+                    <li>
+                        📝 Apply to a Sponsor
+                        <hr/>
+                        Joining our site will provide you with a comprehensive list of sponsors all looking for someone like you to join the team! Apply to as many or as little as you want — your future may be a click away!
+                    </li>
+                    <li>
+                        🚚 Drive Safe
+                        <hr/>
+                        Once a sponsor has hired you, make sure to follow their driving guidelines. Driving to your sponsor's specifications will net you points!
+                    </li>
+                    <li>
+                        🪙 Get Rewarded
+                        <hr/>
+                        After you earn enough points, you can navigate over to your sponsor's catalog. There you will be able to redeem your points for all sorts of exciting rewards!
+                    </li>
                 </ul>
             </div>
         </div>

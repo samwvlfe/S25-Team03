@@ -13,8 +13,8 @@
 }
 
 @keyframes scroll-background {
-  0% {transform: translateY(0%);}
-  100% {transform: translateY(-100%);}
+  0% {transform: translateY(-50%);}
+  100% {transform: translateY(0%);}
 }
 
 body {
@@ -164,7 +164,7 @@ body {
 .starfield {
   display: flex;
 
-  width: 20%;
+  width: 25%;
 
   overflow: hidden;
 }
@@ -175,10 +175,13 @@ body {
   height: 200%;
   width: 100%;
   background-image: url('./starfield.svg');
+  background-size: 100% 50%;
 
+  animation: 5s linear 0s infinite scroll-background;
+}
 
-
-  /* animation: 0.5s linear 0s infinite alternate scroll-background; */
+.starfield:nth-child(1)::before {
+  animation-delay: -2s;
 }
 
 .ship {
