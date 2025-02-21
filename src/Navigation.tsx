@@ -17,7 +17,7 @@ export default function Navigation() {
     return (
         <Router>
             <div>
-                <div className="web-header">
+                <header>
                     <Link to="/">
                         <div className="logo">
                             <img src={logo}/>
@@ -40,7 +40,7 @@ export default function Navigation() {
                             </li>
                         </ul>
                     </nav>
-                </div>
+                </header>
 
                 <Routes>
                     <Route path="/support" element={<Support/>} />

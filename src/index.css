@@ -27,7 +27,7 @@ body {
 }
 
 /* Formatting for the web header itself. */
-.web-header {
+header {
   display: flex;
   align-items: stretch;
   justify-content: space-around;
@@ -39,7 +39,7 @@ body {
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
 }
 
-.web-header a {
+header a {
   text-decoration: none;
   color: #231F20;
 }
