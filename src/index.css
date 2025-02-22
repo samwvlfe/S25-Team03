@@ -83,7 +83,9 @@ header a {
 }
 
 .nav-bar li {
-  width: 40%;
+  width: 25%;
+
+  padding: 6px;
 
   justify-content: center;
   align-items: center;
@@ -249,4 +251,30 @@ header a {
 .info-container li hr {
   border: 1px solid lightgrey;
   width: 60%;
+}
+
+/* Formatting for the login / sign up page. */
+.account-form {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.account-form form {
+  border-radius: 20px;
+
+  padding: 40px;
+
+  background-color: white;
+  box-shadow: 0 5px 5px lightgrey;
+}
+
+.account-form button {
+  border-radius: 20px;
+
+  margin-top: 20px;
+  padding: 5px;
+
+  width: 100%;
 }
