@@ -16,39 +16,37 @@ import accountIcon from './signin.svg';
 export default function Navigation() {
     return (
         <Router>
-            <div>
-                <header>
-                    <Link to="/">
-                        <div className="logo">
-                            <img src={logo}/>
-                            <p><b>AlienBaba</b>.com</p>
-                        </div>
-                    </Link>
-                    <nav className="nav-bar">
-                        <ul>
-                            <li>
-                                <Link to="/support">Support</Link>
-                            </li>
-                            <li>
-                                <Link to="/signin">
-                                    <img src={accountIcon}/>
-                                    Sign In
-                                </Link>
-                            </li>
-                            <li className="account-button">
-                                <Link to="/signup">Sign Up</Link>
-                            </li>
-                        </ul>
-                    </nav>
-                </header>
+            <header>
+                <Link to="/">
+                    <div className="logo">
+                        <img src={logo}/>
+                        <p><b>AlienBaba</b>.com</p>
+                    </div>
+                </Link>
+                <nav className="nav-bar">
+                    <ul>
+                        <li>
+                            <Link to="/support">Support</Link>
+                        </li>
+                        <li>
+                            <Link to="/signin">
+                                <img src={accountIcon}/>
+                                Sign In
+                            </Link>
+                        </li>
+                        <li className="account-button">
+                            <Link to="/signup">Sign Up</Link>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
 
-                <Routes>
-                    <Route path="/support" element={<Support/>} />
-                    <Route path="/signin" element={<Login />} />
-                    <Route path="/signup" element={<Signup />} />
-                    <Route path="/" element={<About/>} />
-                </Routes>
-            </div>
+            <Routes>
+                <Route path="/support" element={<Support/>} />
+                <Route path="/signin" element={<Login />} />
+                <Route path="/signup" element={<Signup />} />
+                <Route path="/" element={<About/>} />
+            </Routes>
         </Router>
     )
 }

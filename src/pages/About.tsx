@@ -22,7 +22,7 @@ export default function About() {
     // Returning all necessary data from the database.
     // Additional logic is in case the data isn't fully loaded.
     return (
-        <div>
+        <div className="about">
             <div className="about-header">
                 <div className="starfield"/>
                 <div className="banner">

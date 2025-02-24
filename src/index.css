@@ -17,6 +17,13 @@
   100% {transform: translateY(0%);}
 }
 
+#root {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+}
+
 body {
   margin: 0;
 
@@ -31,6 +38,8 @@ header {
   display: flex;
   align-items: stretch;
   justify-content: space-around;
+
+  background-color: white;
 
   padding: 15px 35px 15px 35px;
 
@@ -114,7 +123,6 @@ header a {
 }
 
 /* Formatting for the sign up button. */
-
 .account-button {
   border-radius: 25px;
 
@@ -254,6 +262,8 @@ header a {
 /* Formatting for the login / sign up page. */
 .account-form {
   display: flex;
+
+  flex: 1;
 
   justify-content: center;
   align-items: center;
