@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import Navigation from './Navigation.tsx';
+import Footer from './components/Footer.tsx'
 import reportWebVitals from './reportWebVitals.ts';
 
 const root = ReactDOM.createRoot(
@@ -10,6 +11,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Navigation />
+    <Footer />
   </React.StrictMode>
 );
 

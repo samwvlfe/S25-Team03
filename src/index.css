@@ -322,3 +322,14 @@ header a {
 .account-form button:hover {
   cursor: pointer;
 }
+
+/* Footer formatting. */
+footer {
+  display: flex;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  background-color: white;
+  padding: 15px;
+}
