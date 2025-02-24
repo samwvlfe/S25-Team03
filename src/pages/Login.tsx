@@ -2,15 +2,15 @@ import React from 'react';
 
 export default function Login() {
     return (
-        <div class="account-form">
+        <div className="account-form">
             <form>
-                <label>Username:</label>
+                <label>Email:</label>
                 <br />
                 <input id="username" type="text" />
                 <br />
                 <label>Password:</label>
                 <br />
-                <input id="password" type="text" />
+                <input id="password" type="password" />
                 <br />
                 <button type="submit">Sign in</button>
             </form>
