@@ -69,6 +69,29 @@ app.put('/api/about/:id', (req, res) => {
     });
 });
 
+// Submitting Application
+app.post('/api/submit-application', (req, res) => {
+    const { applicantName, applicantType, username, email, password, companyID } = req.body;
+
+    if (!applicantName || !applicantType || !username || !email || !password) {
+        return res.status(400).json({ error: 'Missing required fields' });
+    }
+
+    const query = `
+        INSERT INTO Applications (ApplicantName, ApplicantType, Username, Email, PasswordHash, CompanyID, ApplicationStatus, SubmissionDate)
+        VALUES (?, ?, ?, ?, ?, ?, 'Pending', NOW())
+    `;
+
+    db.query(query, [applicantName, applicantType, username, email, password, companyID || null], (err, result) => {
+        if (err) {
+            console.error('Database insert failed:', err);
+            res.status(500).json({ error: 'Database insert failed', details: err });
+        } else {
+            res.status(201).json({ message: 'Application submitted successfully', id: result.insertId });
+        }
+    });
+});
+
 // Start server
 app.listen(port, () => {
     console.log(`Server running at http://127.0.0.1:${port}/`);

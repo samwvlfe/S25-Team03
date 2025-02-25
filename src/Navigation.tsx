@@ -10,6 +10,7 @@ import About from './pages/About.tsx';
 import Signup from './pages/Signup.tsx';
 import Login from './pages/Login.tsx';
 import Support from './pages/Support.tsx';
+import ApplicationForm from './pages/ApplicationForm.tsx';
 import logo from './logo.svg';
 import accountIcon from './signin.svg';
 
@@ -37,14 +38,19 @@ export default function Navigation() {
                         <li className="account-button">
                             <Link to="/signup">Sign Up</Link>
                         </li>
+                        <li className="account-button">
+                            <Link to="/apply">Apply</Link>
+                        </li>
                     </ul>
                 </nav>
             </header>
+
 
             <Routes>
                 <Route path="/support" element={<Support/>} />
                 <Route path="/signin" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
+                <Route path="/apply" element={<ApplicationForm />} />
                 <Route path="/" element={<About/>} />
             </Routes>
         </Router>
